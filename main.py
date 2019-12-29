@@ -4,8 +4,8 @@ app = Flask(__name__)
 
 title = "Stepik Travel"
 subtitle = "Für Leute, die zu Hause keine Ruhe und Konzentration finden können"
-description = """Die beste Ausflugziele, wo niemand Sie die Erlernung von Programmierung, Design oder Game-entwicklung
- stört, wo Sie sich vollkommen entlasten können!"""
+description = """Die besten Ausflugziele für Sie; die Programmierung, Design oder Game-Entwicklung
+ erlernen. Wo Sie sich vollkommen darauf einlasten können und sie niemand stört!"""
 departures = {"ber": "von Berlin", "mcn": "von München", "drn": "von Dresden", "frt": "von Frankfurt am Main",
               "brmn": "von Bremen"}
 
