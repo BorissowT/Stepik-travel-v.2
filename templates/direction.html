@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block container %}
+
+    <h1 class="display-5 mt-4">Die Flüge {{direction}}</h1>
+
+    <p class="mb-4">{{counter}} Touren gefunden, ab {{minprice}} rub. bis {{maxprice}} rub. und ab {{minnights}} bis {{maxnights}} Nächte </p>
+
+
+    <div class="row mt-5">
+        {% for id in iddirection %}
+         <div class="col-4">
+            <div class="card mb-3">
+                <img src={{ways[id]['picture']}}  width="300" height="200" class="card-img-top" >
+                <div class="card-body">
+                    <h5 class="card-title">{{ways[id]['title']}}</h5>
+                    <p class="card-text">{% filter truncate(150, True) %}{{ways[id]['description']}}{% endfilter %}</p>
+                    <a href="/tours/{{id}}" class="btn btn-sm btn-primary">Mehr...</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

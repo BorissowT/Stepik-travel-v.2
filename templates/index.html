@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block container %}
+
+    <div class="jumbotron text-center mt-4">
+      <h1 class="display-4">Spannende Touren</h1>
+      <p class="lead">Für Leute, die zu Hause keine Ruhe und Konzentration finden können</p>
+      <p class="mt-5 w-50 mx-auto">Die beste Ausflugziele, wo niemand Sie die Erlernung von Programmierung, Design oder Game-entwicklung
+ stört, wo Sie sich vollkommen entlasten können!</p>
+    </div>
+
+    <!-- CARDS -->
+
+    <div class="row mt-5">
+
+
+
+        {% for id in ways %}
+        <div class="col-4">
+            <div class="card mb-3">
+                <img src={{ways[id]['picture']}}  width="300" height="200" class="card-img-top" >
+                <div class="card-body">
+                    <h5 class="card-title">{{ways[id]['title']}}</h5>
+                    <p class="card-text">{% filter truncate(143) %}{{ways[id]['description']}}{% endfilter %}</p>
+                    <a href="/tours/{{id}}" class="btn btn-sm btn-primary">Mehr...</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+{% endblock %}

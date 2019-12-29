@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block container %}
+
+
+    <h1 class="display-3 mt-4">{{title}}  {{stars}} ★</h1>
+
+    <!-- HERO -->
+
+    <p class="lead">{{country}} {{departure}} {{nights}} Nächte</p>
+
+    <img src={{picture}} class="w-75" alt="">
+
+    <p class="my-4 w-75">{{description}}</p>
+
+    <a href="" class="btn btn-success btn-lg">Kaufen für {{price}} rub.</a>
+</div>
+
+
+</body>
+</html>
+
+{% endblock %}
